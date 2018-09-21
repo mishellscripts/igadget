@@ -14,13 +14,16 @@ module.exports = function() {
   $body.prepend($mwHeader);
   $mwHeader.append($mwHeaderTop);
   $mwHeader.append($mwHeaderBottom);
-  $mwHeaderTop.append($body.find("#Logo"));
+  $mwHeaderTop.append(fns.addClassToElement("#Logo", "mw-logo"));
   $mwHeaderTop.append($menuIconList);
   $mwHeaderBottom.append($mwMenuBtn);
   $mwHeaderBottom.append($searchForm);
 
   // Remove unwanted elements from the menu icons list
   $menuIcons.not(":contains(Account), :contains(Cart)").remove();
+  $menuIcons.addClass("mw-header-icon-wrapper");
+  $menuIcons.filter(":contains(Account)").find("a").addClass("mw-header-icon sprites-user").text("");
+  $menuIcons.filter(":contains(Cart)").find("a").addClass("mw-header-icon sprites-cart").text("");
 
   // Modify search form - Assign placeholder to search input
   $searchForm.find("input[type=text]").attr("placeholder", "Search...");
@@ -30,4 +33,13 @@ module.exports = function() {
   $mwHeader.append($menu);
   $menu.append($body.find("#SideCategoryList"));
   $menu.find("li").addClass("mw-bar-menu");
+  
+  // Style menu
+  $menu.addClass("mw-menu-filter");
+  let $categoryList = $menu.find("#SideCategoryList");
+  $categoryList.attr("data-ur-set", "toggler");
+  let $categoryListContent = $categoryList.find(".BlockContent");
+  $categoryListContent.attr("data-ur-toggler-component", "content");
+  let $categoryListHeader = $categoryList.find("h2");
+  $categoryListHeader.attr("data-ur-toggler-component", "button").addClass("mw-headline-menu");
 };

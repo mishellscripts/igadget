@@ -38,3 +38,37 @@
   -webkit-justify-content: space-around;
   justify-content: space-around;
 }
+.mw-menu-filter {
+  border: 1px solid $color-igadget-primary;
+  border-radius: $base-border-radius;
+  overflow: hidden;
+  .mw-headline-menu {
+    background: $color-igadget-primary;
+    color: white;
+    padding: $spacing-box;
+    &:after {
+      @include sprites-plus;
+      content: "";
+      float: right;
+    }
+    &[data-ur-state="enabled"]:after {
+      background-position: $sprites-minus-x $sprites-minus-y;
+    }
+  }
+  .mw-bar-menu {
+    background: #F5F1E2;
+    border-top: 1px solid $color-igadget-primary;
+    display: block;
+    padding: $spacing-box;
+    &:after {
+      @include sprites-menu_go;
+      content: "";
+      float: right;
+    }
+  }
+}
+.ProductList {
+  li {
+    display: inline-block;
+  }
+}

@@ -58,3 +58,7 @@ fns.importTransformations = function() {
     require("/pages/error.js")();
   }
 };
+
+fns.addClassToElement = function(target, className) {
+  return $body.find(target).addClass(className);
+};

@@ -18,9 +18,13 @@ module.exports = function() {
 
     // Perfect Proxy means we return the HTML to the user unmodified.
     if (fns.shouldPerfectProxy(env, routes)) {
-      return {
-        htmlparsed: false
-      };
+      return { htmlparsed: false };
+    } else if (routes.pageType.passthrough === "fragment") {
+      require("/fragment.js")();
+      return { body: $.html(), htmlparsed: true };
+    } else {
+      require("/html.js")();
+      return { body: $.html(), htmlparsed: true };
     }
 
     // Run the scripts/html.js HTML transformer
@@ -28,6 +32,13 @@ module.exports = function() {
     return {
       body: $.html(),
       htmlparsed: true
+    };
+  }
+
+  if (contentType.indexOf("text/javascript") > -1) {
+    return {
+     body: require("/js_overrides.js")(),
+     htmlparsed: false
     };
   }
 

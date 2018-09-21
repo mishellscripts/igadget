@@ -32,6 +32,12 @@ module.exports = function() {
       name: "cart",
       element: "#CartContent",
       imports: ["/pages/cart.js"]
+    },
+    {
+      name: "cart-fragment",
+      passthrough: "fragment",
+      url: /cart\.php/,
+      imports: ["/pages/cart_fragment.js"]
     }
   );
 

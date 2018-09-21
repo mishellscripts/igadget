@@ -17,4 +17,9 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     text-decoration: none;
   }
 }
-
+.mw-btn-go {
+  @include btn($color-success);
+}
+.mw-btn-stop {
+  @include btn($color-danger);
+}

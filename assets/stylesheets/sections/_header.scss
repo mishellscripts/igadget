@@ -1,2 +1,49 @@
-.mw-header {
-}
+.mw-header-top {
+	border-top: 1px solid black;
+	.mw-logo {
+	  @include linear-gradient($color-logo 0, shade($color-logo, 20%) 100%);
+	  font-size: 22px;
+	  margin: 0;
+	  padding: $spacing-box;
+	  text-shadow: 0 -1px rgba(0,0,0,0.9);
+	  a {
+		color: white;
+	  }
+	}
+	ul {
+	  position: absolute;
+	  right: $spacing-box;
+	  top: 0;
+	}
+	.mw-header-icon-wrapper, .mw-header-icon {
+	  display: inline-block;
+	}
+  }
+  
+  .mw-header-bottom {
+	@include linear-gradient(#852201, #6a1b00);
+	overflow: hidden;
+	padding: $spacing-box;
+	.mw-menu-btn {
+	  float: right;
+	  margin-left: $spacing-box;
+	}
+	form {
+	  display: table;
+	  position: relative;
+	  width: 75%;
+	}
+	label {
+	  display: none;
+	}
+	.mw-search-btn, input[type="text"] {
+	  display: table-cell;
+	  height: 33px;
+	  vertical-align: middle;
+	}
+	input[type="image"] {
+	  height: 33px;
+	  visibility: hidden;
+	  width: 40px;
+	}
+  }

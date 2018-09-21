@@ -1,6 +1,8 @@
+@import "globals/sprites";
 @import "globals/reset";
 @import "globals/bourbon/bourbon"; // Moovweb-modified
 @import "globals/uranium";
+@import "globals/mixins";
 @import "globals/variables";
 @import "globals/lib";
 
@@ -13,3 +15,6 @@
 
 // Pages
 @import "pages/home";
+@import "pages/category";
+@import "pages/product";
+@import "pages/cart";
