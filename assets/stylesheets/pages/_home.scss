@@ -1,2 +1,21 @@
 .mw-home {
+    .Content {
+        .Block {
+            padding-bottom: 40px;
+        }
+        .ProductList {
+            li {
+                padding: 20px;
+                .ProductPriceRating {
+                    em {
+                        float: left;
+                    }
+                }
+                .ProductActionAdd {
+                    clear: both;
+                }
+            }
+        }
+        
+    }
 }

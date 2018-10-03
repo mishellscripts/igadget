@@ -1,2 +1,31 @@
 .mw-category {
+    .SortBox {
+        select {
+            width: auto;
+            height: auto;
+            margin-left: 20px;
+        }
+    }
+    .ProductList {
+        margin-top: 20px;
+        li {
+            width: 100% !important;
+            background-color: $color-input-border;
+            margin-bottom: 5px;
+            padding: 10px;
+            >* {
+                margin-bottom: 5px 0px;
+            }
+            .ProductPriceRating {
+                color: $color-danger;
+            }
+            .ProductImage {
+                float: left;
+                padding-right: 20px;
+            }
+            .QuickViewBtn {
+                margin-top: -16px !important;
+            }
+        }
+    }
 }

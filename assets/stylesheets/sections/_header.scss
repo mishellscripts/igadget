@@ -25,6 +25,7 @@
 	overflow: hidden;
 	padding: $spacing-box;
 	.mw-menu-btn {
+	  cursor: pointer;
 	  float: right;
 	  margin-left: $spacing-box;
 	}

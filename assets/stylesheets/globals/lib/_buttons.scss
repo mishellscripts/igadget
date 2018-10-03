@@ -13,13 +13,12 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
   margin-bottom: $spacing-para;
   padding: $spacing-box;
   vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
   a {
     text-decoration: none;
   }
 }
 .mw-btn-go {
-  @include btn($color-success);
-}
-.mw-btn-stop {
-  @include btn($color-danger);
+  @include btn($color-btn);
 }

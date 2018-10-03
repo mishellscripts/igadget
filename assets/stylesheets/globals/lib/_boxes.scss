@@ -39,17 +39,23 @@
   justify-content: space-around;
 }
 .mw-menu-filter {
-  border: 1px solid $color-igadget-primary;
+  border: 1px solid $color-btn;
   border-radius: $base-border-radius;
+  margin-bottom: 5px;
   overflow: hidden;
   .mw-headline-menu {
-    background: $color-igadget-primary;
+    background: $color-btn;
     color: white;
     padding: $spacing-box;
-    &:after {
-      @include sprites-plus;
-      content: "";
-      float: right;
+    &.mw-toggle {
+      &:after {
+        @include sprites-plus;
+        content: "";
+        float: right;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
     &[data-ur-state="enabled"]:after {
       background-position: $sprites-minus-x $sprites-minus-y;
@@ -57,7 +63,7 @@
   }
   .mw-bar-menu {
     background: #F5F1E2;
-    border-top: 1px solid $color-igadget-primary;
+    border-top: 1px solid $color-btn;
     display: block;
     padding: $spacing-box;
     &:after {

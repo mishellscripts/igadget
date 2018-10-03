@@ -32,14 +32,15 @@ module.exports = function() {
   // Move updated menu into header element
   $mwHeader.append($menu);
   $menu.append($body.find("#SideCategoryList"));
-  $menu.find("li").addClass("mw-bar-menu");
-  
+  $menu.find("a").addClass("mw-bar-menu");
+
   // Style menu
   $menu.addClass("mw-menu-filter");
+  $menu.addClass("hidden");
   let $categoryList = $menu.find("#SideCategoryList");
   $categoryList.attr("data-ur-set", "toggler");
   let $categoryListContent = $categoryList.find(".BlockContent");
   $categoryListContent.attr("data-ur-toggler-component", "content");
   let $categoryListHeader = $categoryList.find("h2");
-  $categoryListHeader.attr("data-ur-toggler-component", "button").addClass("mw-headline-menu");
+  $categoryListHeader.attr("data-ur-toggler-component", "button").addClass("mw-headline-menu mw-toggle");
 };

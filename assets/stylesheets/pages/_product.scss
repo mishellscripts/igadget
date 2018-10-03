@@ -1,2 +1,30 @@
 .mw-product {
+    .ProductMain {
+        background-color: $color-input-border;
+        margin: 5px;
+        padding: 5px;
+        .Label {
+            float: left;
+            padding-right: 5px;
+        }
+        select {
+            width: auto;
+            height: auto;
+        }
+        .productAttributeList {
+            >* {
+                margin: 5px 0px;
+            }
+        }
+        .BulkDiscount {
+            margin: 5px 0px;
+        }
+    }
+    .Panel {
+        padding: 5px;
+        hr {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+    }
 }

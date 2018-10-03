@@ -1,12 +1,11 @@
 mw.igadget.base = function() {
 
   function initialize() {
-    var $mwHeader = $(".mw-header");
+    let $mwHeader = $(".mw-header");
+    let $menu = $mwHeader.find("#Menu");
+
     $mwHeader.find(".mw-menu-btn").on("click", function() {
-        $mwHeader.find("#Menu").toggle();
-    });
-    $(".modalContainer").DOMNodeAppear(function() {
-      $(this).css("top", window.pageYOffset + 15);
+        $menu.toggle();
     });
   }
 

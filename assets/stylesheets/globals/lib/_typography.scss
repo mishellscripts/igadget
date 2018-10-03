@@ -23,3 +23,17 @@ sup {
 sub {
   top: .5ex;
 }
+.mw-main-title {
+    font-size: 20px;
+    line-height: 30px;
+    color: $color-dark-gray;
+    font-weight: bold;
+}
+.mw-section-title {
+    font-size: 16px;
+    color: $color-dark-gray;
+    font-weight: bold;
+}
+li a {
+    color: $color-dark-gray;
+}
