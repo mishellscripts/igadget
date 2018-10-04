@@ -71,7 +71,7 @@ fns.removeElements = function(elementsArr) {
 
 fns.addAttributes = function(element, attributes) {
     attributes.forEach(function(attribute) {
-        const key = Object.keys(attribute)[0]
+        const key = Object.keys(attribute)[0];
         element.attr(key, attribute[key]);
     });
 };
