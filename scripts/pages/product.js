@@ -3,16 +3,20 @@ module.exports = function() {
 
 	// Add/remove elements based on mobile mockup
 	let $bodyContentOuter = $body.find("#Outer");
-	$bodyContentOuter.find("#Header").remove();
-	$bodyContentOuter.find("#ProductBreadcrumb").remove();
-	$bodyContentOuter.find(".Left").remove();
-	$bodyContentOuter.find(".Right").remove();
-	$bodyContentOuter.find("#ProductByCategory").remove();
-
 	let $bodyContent = $bodyContentOuter.find(".BlockContent");
-	$bodyContent.find(".AddThisButtonBox").remove();
-	$bodyContent.find("#ImageScrollPrev").remove();
-	$bodyContent.find("#ImageScrollNext").remove();
+	
+	fns.removeElements([
+		$bodyContentOuter.find("#Header"),
+		$bodyContentOuter.find("#ProductBreadcrumb"),
+		$bodyContentOuter.find(".Left"),
+		$bodyContentOuter.find(".Right"),
+		$bodyContentOuter.find("#ProductByCategory"),
+		$bodyContent.find(".AddThisButtonBox"),
+		$bodyContent.find("#ImageScrollPrev"),
+		$bodyContent.find("#ImageScrollNext")
+	]);
+	
+	// Style elements	
 	$bodyContent.find("h2").addClass("mw-main-title");
 	$bodyContentOuter.find("h3").addClass("mw-section-title");	
 	

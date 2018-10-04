@@ -59,10 +59,6 @@ fns.importTransformations = function() {
   }
 };
 
-fns.addClassToElement = function(target, className) {
-  return $body.find(target).addClass(className);
-};
-
 fns.styleCommonElements = function() {
     $body.find("#AjaxLoading").addClass("hidden-block");
 };
@@ -70,5 +66,12 @@ fns.styleCommonElements = function() {
 fns.removeElements = function(elementsArr) {
     elementsArr.forEach(function(element) {
         element.remove();
+    });
+};
+
+fns.addAttributes = function(element, attributes) {
+    attributes.forEach(function(attribute) {
+        const key = Object.keys(attribute)[0]
+        element.attr(key, attribute[key]);
     });
 };

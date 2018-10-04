@@ -17,6 +17,9 @@
                 float: left;
                 padding-right: 5px;
             }
+            .Label, .productAttributeLabel {
+                font-weight: bold;
+            }
             select {
                 width: auto;
                 height: auto;
@@ -33,8 +36,5 @@
                 margin-right: -10px;
             }
         }
-    }
-    .fastCartContainer {
-
     }
 }

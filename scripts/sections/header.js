@@ -2,10 +2,10 @@ module.exports = function() {
   console.log("Starting scripts/sections/header.js");
 
   let $mwHeader = $(tag("header", { class: "mw-header" }));
-  let $mwHeaderTop = $(tag("div", { class: "mw-header-top" })); // Tag builds new element
-  let $mwHeaderBottom = $(tag("div", { class: "mw-header-bottom" })); // Wrap new element with $() to access form Cheerio object w/ access to methods
+  let $mwHeaderTop = $(tag("div", { class: "mw-header-top" }));
+  let $mwHeaderBottom = $(tag("div", { class: "mw-header-bottom" }));
   let $mwMenuBtn = $(tag("div", {class: "mw-menu-btn sprites-menu"}));
-  let $menuIconList = $body.find("#TopMenu ul"); // Create variables expected to be used more than once
+  let $menuIconList = $body.find("#TopMenu ul");
   let $menuIcons = $menuIconList.find("li");
   let $searchForm = $body.find("#SearchForm form");
   let $menu = $body.find("#Menu");
@@ -14,7 +14,7 @@ module.exports = function() {
   $body.prepend($mwHeader);
   $mwHeader.append($mwHeaderTop);
   $mwHeader.append($mwHeaderBottom);
-  $mwHeaderTop.append(fns.addClassToElement("#Logo", "mw-logo"));
+  $mwHeaderTop.append($body.find("#Logo").addClass("mw-logo"));
   $mwHeaderTop.append($menuIconList);
   $mwHeaderBottom.append($mwMenuBtn);
   $mwHeaderBottom.append($searchForm);
