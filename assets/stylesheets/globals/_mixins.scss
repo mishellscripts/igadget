@@ -6,3 +6,11 @@
 	border-radius: 5px;
 	width: 120px;
 }
+@mixin sprite($sprite) {
+	cursor: pointer;
+    &:after {
+        @include $sprite;
+        display: inline-block;
+        content: "";
+    }
+}

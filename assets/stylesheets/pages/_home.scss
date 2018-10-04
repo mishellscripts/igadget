@@ -7,12 +7,10 @@
             li {
                 padding: 20px;
                 .ProductPriceRating {
-                    em {
-                        float: left;
+                    display: flex;
+                    .Rating img {
+                        max-width: none !important;
                     }
-                }
-                .ProductActionAdd {
-                    clear: both;
                 }
             }
         }
