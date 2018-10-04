@@ -2,8 +2,8 @@ module.exports = function() {
 	$body.addClass("mw-category");
 	
 	let $bodyContentOuter = $body.find("#Outer");
-	// let $shopByPrice = $body.find("#SideCategoryShopByPrice"); // Wrapper
-	// let $shopByPriceContent = $shopByPrice.find(".BlockContent"); // Content
+	let $shopByPrice = $body.find("#SideCategoryShopByPrice"); // Wrapper
+	let $shopByPriceContent = $shopByPrice.find(".BlockContent"); // Content
 	let $shopByBrand = $body.find("#SideShopByBrand");
 	let $shopByBrandContent = $shopByBrand.find(".BlockContent"); // Content
 	let $categoryContent = $body.find("#CategoryContent");
@@ -20,10 +20,12 @@ module.exports = function() {
 	]);
 
 	// Shop by price toggler
-	// $shopByPrice.find("h2").attr("data-ur-toggler-component", "button").addClass("mw-headline-menu"); // Trigger
-	// $shopByPriceContent.attr("data-ur-toggler-component", "content");
-	// $shopByPriceContent.find("a").addClass("mw-bar-menu");
-	// $shopByPrice.attr("data-ur-set", "toggler").addClass("mw-menu-filter");
+	if ($shopByPrice.css("display") !== "none") {
+		$shopByPrice.find("h2").attr("data-ur-toggler-component", "button").addClass("mw-headline-menu mw-toggle"); // Trigger
+		$shopByPriceContent.attr("data-ur-toggler-component", "content");
+		$shopByPriceContent.find("a").addClass("mw-bar-menu");
+		$shopByPrice.attr("data-ur-set", "toggler").addClass("mw-menu-filter");
+	}
 	
 	// Shop by brand toggler
 	$shopByBrand.attr("data-ur-set", "toggler").addClass("mw-menu-filter");
@@ -37,4 +39,5 @@ module.exports = function() {
 	$sortBox.parent().find("h2").remove();
 	$sortBox.addClass("mw-headline-menu");
 	$categoryContent.find(".ProductActionAdd a").addClass("mw-btn mw-btn-go");
+	$bodyContentOuter.find(".SubCategoryList").remove();
 };
