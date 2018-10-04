@@ -1,30 +1,40 @@
 .mw-product {
-    .ProductMain {
-        background-color: $color-input-border;
-        margin: 5px;
-        padding: 5px;
-        .Label {
-            float: left;
-            padding-right: 5px;
+    #Outer {
+        padding: 10px;
+    }
+    .Content {
+        .ImageCarouselBox {
+            margin-top: 20px !important;
         }
-        select {
-            width: auto;
-            height: auto;
-        }
-        .productAttributeList {
-            >* {
-                margin: 5px 0px;
+        .ProductMain {
+            background-color: $color-light-gray;
+            margin: 0 -15px;
+            padding: 10px;
+            .DetailRow, .productAttributeRow {
+                margin-bottom: 10px;
+            }
+            .Label {
+                float: left;
+                padding-right: 5px;
+            }
+            select {
+                width: auto;
+                height: auto;
+            }
+            .productAttributeList {
+                >* {
+                    margin: 5px 0px;
+                }
             }
         }
-        .BulkDiscount {
-            margin: 5px 0px;
+        .Panel {
+            hr {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
         }
     }
-    .Panel {
-        padding: 5px;
-        hr {
-            margin-left: -5px;
-            margin-right: -5px;
-        }
+    .fastCartContainer {
+
     }
 }

@@ -2,7 +2,6 @@ module.exports = function() {
 	$body.addClass("mw-product");
 
 	// Add/remove elements based on mobile mockup
-	$body.find("#AjaxLoading").addClass("hidden-block");
 	let $bodyContentOuter = $body.find("#Outer");
 	$bodyContentOuter.find("#Header").remove();
 	$bodyContentOuter.find("#ProductBreadcrumb").remove();
@@ -12,6 +11,8 @@ module.exports = function() {
 
 	let $bodyContent = $bodyContentOuter.find(".BlockContent");
 	$bodyContent.find(".AddThisButtonBox").remove();
+	$bodyContent.find("#ImageScrollPrev").remove();
+	$bodyContent.find("#ImageScrollNext").remove();
 	$bodyContent.find("h2").addClass("mw-main-title");
 	$bodyContentOuter.find("h3").addClass("mw-section-title");	
 	

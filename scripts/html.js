@@ -12,11 +12,11 @@ module.exports = function() {
   fns.cleanMobileMetaTags();
   fns.removeAllStyles();
   fns.removeHtmlComments();
+  fns.styleCommonElements();
 
   // Import section and mapping files
   require("/sections/header.js")();
   require("/sections/footer.js")();
-  require("/sections/modal.js")();
   fns.importTransformations();
 
   // Enable and configure moov_perf optimization library

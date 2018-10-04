@@ -62,3 +62,13 @@ fns.importTransformations = function() {
 fns.addClassToElement = function(target, className) {
   return $body.find(target).addClass(className);
 };
+
+fns.styleCommonElements = function() {
+    $body.find("#AjaxLoading").addClass("hidden-block");
+};
+
+fns.removeElements = function(elementsArr) {
+    elementsArr.forEach(function(element) {
+        element.remove();
+    });
+};

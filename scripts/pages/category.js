@@ -1,5 +1,6 @@
 module.exports = function() {
-	let $loader = $body.find("#AjaxLoading");
+	$body.addClass("mw-category");
+	
 	let $bodyContentOuter = $body.find("#Outer");
 	// let $shopByPrice = $body.find("#SideCategoryShopByPrice"); // Wrapper
 	// let $shopByPriceContent = $shopByPrice.find(".BlockContent"); // Content
@@ -8,14 +9,15 @@ module.exports = function() {
 	let $categoryContent = $body.find("#CategoryContent");
 	
 	// Add/remove elements based on mobile mockup
-	$body.addClass("mw-category");
-	$loader.addClass("hidden-block");
 	let $pageTitle = $(tag("h2", { class: "mw-main-title" }, "Misc"));
 	$bodyContentOuter.find("#Header").html('').append($pageTitle);
-	$bodyContentOuter.find("#CategoryBreadcrumb").remove();
-	$bodyContentOuter.find(".Right").remove();
-	$categoryContent.find(".ProductCompareButton").remove();
-	$categoryContent.find(".CompareButton").remove();
+	
+	fns.removeElements([
+		$bodyContentOuter.find("#CategoryBreadcrumb"),
+		$bodyContentOuter.find(".Right"),
+		$categoryContent.find(".ProductCompareButton"),
+		$categoryContent.find(".CompareButton")
+	]);
 
 	// Shop by price toggler
 	// $shopByPrice.find("h2").attr("data-ur-toggler-component", "button").addClass("mw-headline-menu"); // Trigger
@@ -29,20 +31,10 @@ module.exports = function() {
 	$shopByBrandContent.attr("data-ur-toggler-component", "content");
 	$shopByBrandContent.find("a").addClass("mw-bar-menu");
 	
-	// Sort box styling
+	// Elements styling
 	let $sortBox = $body.find(".SortBox");
 	$sortBox.parent().addClass("mw-menu-filter");
 	$sortBox.parent().find("h2").remove();
 	$sortBox.addClass("mw-headline-menu");
-	
-	// Content styling
 	$categoryContent.find(".ProductActionAdd a").addClass("mw-btn mw-btn-go");
-	// let $productList = $categoryContent.find(".ProductList");
-	// let $productListItem = $productList.find("li");
-	// $productListItem.each(function(i, item) {
-	// 	let $item = $("item");
-	// 	let $productDescriptionWrapper = $(tag("div", { class: "mw-desc-wrapper" }));
-	// 	$productDescriptionWrapper.append($item.contents());
-	// 	$(item).append($productDescriptionWrapper);
-	// });
 };

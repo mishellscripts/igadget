@@ -10,7 +10,7 @@
         margin-top: 20px;
         li {
             width: 100% !important;
-            background-color: $color-input-border;
+            background-color: $color-light-gray;
             margin-bottom: 5px;
             padding: 10px;
             >* {
@@ -24,7 +24,29 @@
                 padding-right: 20px;
             }
             .QuickViewBtn {
-                margin-top: -16px !important;
+                cursor: pointer;
+            }
+        }
+    }
+    #QuickViewProductDetails {
+        p {
+            background-color: $color-light-gray;
+            margin: 10px -10px;
+            padding: 10px;
+        }
+        .productAttributeRow {
+            margin-bottom: 10px;
+            .productAttributeLabel {
+                font-weight: bold;
+                float: left;
+                margin-right: 5px;
+            }
+            .productAttributeValue {
+                clear: both;
+                select {
+                    height: auto;
+                    width: auto;
+                }
             }
         }
     }

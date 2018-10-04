@@ -1,8 +1,6 @@
 [data-ur-set="carousel"] {
   overflow: hidden;
   position: relative;
-  max-width: 500px !important;
-  margin: 0 auto !important;
 }
 [data-ur-carousel-component="scroll_container"] {
   clear: both;
@@ -29,10 +27,15 @@
 }
 .mw-control {
     margin-left: 20px;
+    cursor: pointer;
+    &:after {
+        display: inline-block;
+        content: "";
+    }
 }
-.mw-control-prev {
-    @include sprite($sprites-btn_back);
+.mw-control-prev::after{
+    @include sprites-btn_back;
 }
-.mw-control-next {
-    @include sprite($sprites-menu_go);
+.mw-control-next::after{
+    @include sprites-menu_go;
 }

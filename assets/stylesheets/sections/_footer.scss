@@ -1,5 +1,6 @@
 .mw-footer {
-    background-color: $color-igadget-primary;
+    @include linear-gradient($color-logo 0, shade($color-logo, 20%) 100%);
+    color: #fff;
     padding: 10px;
     p {
         margin: 5px 0px;
